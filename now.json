@@ -1,4 +1,10 @@
 {
+  "github": {
+    "silent": true
+  },
+  "env": {
+    "API_KEY": "@api_key"
+  },
   "redirects": [
     {
       "source": "/",

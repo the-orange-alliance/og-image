@@ -7,9 +7,10 @@ For each keystroke, headless chromium is used to render an HTML page and take a 
 
 ### Running locally
 1. Clone the repo
-2. run ``npm install``
-3. run ``npm install -g now``
-4. run ``now dev`` and visit [localhost:3000](http://localhost:3000)
+2. Run ``npm install``
+3. Run ``npm install -g now``
+4. Fill out ``.env.sample`` and save it as ``.env``.
+5. Run ``now dev`` and visit [localhost:3000](http://localhost:3000)
 
 ### Deploy
 Simply run ``now``.

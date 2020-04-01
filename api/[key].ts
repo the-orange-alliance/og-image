@@ -2,9 +2,8 @@ import { NowRequest, NowResponse } from '@now/node'
 import { API } from '@the-orange-alliance/api';
 import moment from 'moment';
 import { getScreenshot } from '../lib/chromium'
-import { TOA_API_KEY, TOA_APP_NAME } from '../config';
 
-const api = new API(TOA_API_KEY, TOA_APP_NAME);
+const api = new API(process.env.API_KEY, 'Open Graph Generator');
 
 export default async (req: NowRequest, res: NowResponse) => {
   const err404 = () => res.status(404).send(null);
