@@ -18,7 +18,7 @@ export default async (req: NowRequest, res: NowResponse) => {
     // Team
     const team = await api.getTeam(key).catch(() => null);
     if (!team) return err404();
-    data.name = `#${team.teamNumber} ${team.teamNameShort || ''}`.trim();
+    data.name = team.teamNameShort ? `#${team.teamNumber} ${team.teamNameShort}` : `Team #${team.teamNumber}`;
     data.description = `${team.city}, ${team.stateProv ? team.stateProv + ', ' : ''}${team.country}`;
   } else if (key.split('-').length === 3) {
     // Event
