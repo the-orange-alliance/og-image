@@ -1,0 +1,22 @@
+{
+  "name": "the-orange-alliance-og-image",
+  "version": "1.0.0",
+  "description": "Generate an open graph image for The Orange Alliance",
+  "engines": {
+    "node": "10.x"
+  },
+  "author": "Ofek Ashery",
+  "license": "MIT",
+  "scripts": {
+    "build": "mkdir -p public && echo '' > public/index.html"
+  },
+  "dependencies": {
+    "@the-orange-alliance/api": "0.0.4",
+    "chrome-aws-lambda": "^2.1.1",
+    "moment": "^2.24.0",
+    "puppeteer-core": "^2.1.1"
+  },
+  "devDependencies": {
+    "@now/node": "^1.5.0"
+  }
+}
