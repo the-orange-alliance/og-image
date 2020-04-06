@@ -1,7 +1,7 @@
-import { NowRequest, NowResponse } from '@now/node'
+import { NowRequest, NowResponse } from '@now/node';
 import { API } from '@the-orange-alliance/api';
 import moment from 'moment';
-import { getScreenshot } from '../lib/chromium'
+import { getScreenshot } from '../lib/chromium';
 
 const api = new API(process.env.API_KEY, 'Open Graph Generator');
 
@@ -30,6 +30,9 @@ export default async (req: NowRequest, res: NowResponse) => {
     const location = `${event.city}, ${event.stateProv ? event.stateProv + ', ' : ''}${event.country}`;
     data.name = event.eventName;
     data.description = date + '<br/>' + location;
+  } else if (key === 'ping') {
+    data.name = 'Pong';
+    data.description = 'Hello from TOA Opengraph server!';
   } else {
     return err404();
   }
@@ -85,5 +88,5 @@ export default async (req: NowRequest, res: NowResponse) => {
   res.setHeader('content-type', 'image/png');
   res.setHeader('content-disposition', `inline; filename="toa-image.png"`);
   res.setHeader('cache-control', 's-maxage=259200'); // 3 days
-  res.send(screenshot)
-}
+  res.send(screenshot);
+};
