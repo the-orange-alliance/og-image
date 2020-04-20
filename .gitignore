@@ -1,4 +1,4 @@
 node_modules
-public
 .now
 .env
+.DS_Store
