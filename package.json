@@ -13,7 +13,7 @@
   "dependencies": {
     "@the-orange-alliance/api": "0.0.4",
     "chrome-aws-lambda": "^2.1.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "puppeteer-core": "^2.1.1"
   },
   "devDependencies": {
